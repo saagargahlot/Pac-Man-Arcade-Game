@@ -1,108 +1,88 @@
-# 🎮 PAC-MAN | React Edition
+# Pac-Man Arcade Game
 
-A modern reimagining of the classic PAC-MAN arcade game built with React, TypeScript, and Tailwind CSS.
+A classic Pac-Man arcade game built with React, TypeScript, and Vite. Navigate through mazes, collect dots, avoid ghosts, and rack up high scores in this faithful recreation of the timeless arcade classic.
 
-## ✨ Features
+## Features
 
-- **Classic Gameplay**: Navigate through mazes, collect dots, and avoid ghosts
-- **Progressive Difficulty**: Multiple levels with increasing challenge
-- **Smooth Animations**: Buttery-smooth 60fps gameplay
-- **Responsive Design**: Works on desktop and mobile devices
-- **Touch Controls**: Mobile-friendly on-screen controls
-- **High Score Tracking**: Compete against your best scores
-- **Modern UI**: Beautiful interface with animated backgrounds
-- **TypeScript**: Fully typed for better code quality and IDE support
+- Classic Pac-Man gameplay mechanics
+- Multiple game levels with increasing difficulty
+- Ghost AI with authentic behavior patterns
+- Score tracking and high score system
+- Responsive game controls
+- Modern UI with Tailwind CSS styling
+- Game state management with React hooks
+- Main menu, options, and high scores screens
 
-## 🎯 How to Play
+## Tech Stack
 
-- **Move**: Arrow keys or WASD
-- **Pause**: Press `P` or `ESC`
-- **Mobile**: Use on-screen directional buttons
+- **React 18** - UI framework
+- **TypeScript** - Type-safe development
+- **Vite** - Fast build tool and dev server
+- **Tailwind CSS** - Utility-first styling
+- **React Router** - Client-side routing
+- **Lucide React** - Icon library
 
-### Objective
-- Collect all dots to complete the level
-- Avoid the ghosts - they'll chase you down!
-- Score points to beat your high score
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
-- Node.js (v16 or higher)
+
+- Node.js (v14 or higher)
 - npm or yarn
 
 ### Installation
 
+1. Clone the repository:
 ```bash
-# Install dependencies
+git clone <repository-url>
+cd pac-man
+```
+
+2. Install dependencies:
+```bash
 npm install
+```
 
-# Start development server
+### Running the Game
+
+Start the development server:
+```bash
 npm run dev
+```
 
-# Build for production
+The game will be available at `http://localhost:5173`
+
+### Building for Production
+
+Create an optimized production build:
+```bash
 npm run build
+```
 
-# Preview production build
+Preview the production build:
+```bash
 npm run preview
 ```
 
-The game will be available at `http://localhost:5173/`
 
-## 🛠️ Tech Stack
+## Game Controls
 
-- **React 18** - UI framework
-- **TypeScript** - Type safety
-- **Vite** - Lightning-fast build tool
-- **Tailwind CSS** - Utility-first styling
-- **Lucide React** - Beautiful icons
-- **React Router** - Navigation
+- **Arrow Keys** / **WASD** - Move Pac-Man
+- **ESC** - Pause game / Return to menu
 
-## 📁 Project Structure
+## Development
 
-```
-pac-man/
-├── game/
-│   ├── components/     # Game UI components
-│   ├── hooks/          # Game logic hooks
-│   ├── types/          # TypeScript types
-│   └── utils/          # Game constants and levels
-├── pages/              # Menu, high scores, options
-├── index.html          # Entry HTML
-├── main.tsx            # React entry point
-└── App.tsx             # Main app component
-```
+The game is structured using a component-based architecture:
 
-## 🎨 Features Breakdown
+- **Game Engine** (`useGameEngine.ts:*`) - Handles game state, collision detection, and score calculation
+- **Game Loop** (`useGameLoop.ts:*`) - Manages frame timing and updates
+- **Board Component** (`Board.tsx:*`) - Renders the game maze and entities
+- **Entity System** (`Entity.tsx:*`) - Manages Pac-Man and ghost rendering
+- **Level System** (`levels.ts:*`) - Defines maze layouts and difficulty progression
 
-### Game Engine
-- Custom game loop with `useGameLoop` hook
-- Collision detection system
-- Ghost AI with pathfinding
-- Progressive difficulty scaling
+## Contributing
 
-### UI/UX
-- Animated background decorations
-- Pause/resume functionality
-- Game over and level complete screens
-- Responsive heads-up display (HUD)
+Contributions are welcome! Feel free to submit issues and pull requests.
 
-## 🎮 Game Mechanics
+## License
 
-- **Ghost Speed**: Consistent across all levels for smooth gameplay
-- **Lives System**: Start with 2 lives
-- **Scoring**:
-  - Dot: 10 points
-  - Power Pellet: 50 points
-  - Ghost (powered-up): 200 points
-
-## 📝 License
-
-This is a personal project created for educational purposes.
-
-## 🙏 Acknowledgments
-
-Inspired by the classic PAC-MAN arcade game by Namco.
-
----
-
-**Made with ❤️ by Saagar Gahlot**
+MIT License - feel free to use this project for learning and entertainment.
