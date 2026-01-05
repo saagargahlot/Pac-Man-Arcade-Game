@@ -63,26 +63,63 @@ Preview the production build:
 npm run preview
 ```
 
+The game will be available at `http://localhost:5173/`
 
-## Game Controls
+## 🛠️ Tech Stack
 
-- **Arrow Keys** / **WASD** - Move Pac-Man
-- **ESC** - Pause game / Return to menu
+- **React 18** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Lightning-fast build tool
+- **Tailwind CSS** - Utility-first styling
+- **Lucide React** - Beautiful icons
+- **React Router** - Navigation
 
-## Development
+## 📁 Project Structure
 
-The game is structured using a component-based architecture:
+```
+pac-man/
+├── game/
+│   ├── components/     # Game UI components
+│   ├── hooks/          # Game logic hooks
+│   ├── types/          # TypeScript types
+│   └── utils/          # Game constants and levels
+├── pages/              # Menu, high scores, options
+├── index.html          # Entry HTML
+├── main.tsx            # React entry point
+└── App.tsx             # Main app component
+```
 
-- **Game Engine** (`useGameEngine.ts:*`) - Handles game state, collision detection, and score calculation
-- **Game Loop** (`useGameLoop.ts:*`) - Manages frame timing and updates
-- **Board Component** (`Board.tsx:*`) - Renders the game maze and entities
-- **Entity System** (`Entity.tsx:*`) - Manages Pac-Man and ghost rendering
-- **Level System** (`levels.ts:*`) - Defines maze layouts and difficulty progression
+## 🎨 Features Breakdown
 
-## Contributing
+### Game Engine
+- Custom game loop with `useGameLoop` hook
+- Collision detection system
+- Ghost AI with pathfinding
+- Progressive difficulty scaling
 
-Contributions are welcome! Feel free to submit issues and pull requests.
+### UI/UX
+- Animated background decorations
+- Pause/resume functionality
+- Game over and level complete screens
+- Responsive heads-up display (HUD)
 
-## License
+## 🎮 Game Mechanics
 
-MIT License - feel free to use this project for learning and entertainment.
+- **Ghost Speed**: Consistent across all levels for smooth gameplay
+- **Lives System**: Start with 2 lives
+- **Scoring**:
+  - Dot: 10 points
+  - Power Pellet: 50 points
+  - Ghost (powered-up): 200 points
+
+## 📝 License
+
+This is a personal project created for educational purposes.
+
+## 🙏 Acknowledgments
+
+Inspired by the classic PAC-MAN arcade game by Namco.
+
+---
+
+**Made with ❤️ by Saagar Gahlot**
